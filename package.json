@@ -26,6 +26,7 @@
     "lyrics-finder": "^21.0.5",
     "play-dl": "^1.9.7",
     "soundcloud-downloader": "^0.2.3",
+    "spotify-url-info": "^3.2.8",
     "string-progressbar": "^1.0.4",
     "youtube-sr": "~4.3.0"
   },

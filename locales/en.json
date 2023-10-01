@@ -54,7 +54,7 @@
     "result": "📈 Average ping to API: {ping} ms"
   },
   "play": {
-    "description": "Plays audio from YouTube",
+    "description": "Plays audio from YouTube or Spotify",
     "errorNotChannel": "You need to join a voice channel first!",
     "errorNotInSameChannel": "You must be in the same channel as {user}",
     "usageReply": "Usage: {prefix}play <YouTube URL | Video Name>",
@@ -84,7 +84,7 @@
     "errorInvalidURL": "Invalid URL, please try a search or youtube url"
   },
   "playlist": {
-    "description": "Play a playlist from youtube",
+    "description": "Play a playlist from youtube or spotify",
     "usagesReply": "Usage: {prefix}playlist <YouTube Playlist URL | Playlist Name>",
     "errorNotChannel": "You need to join a voice channel first!",
     "errorNotInSameChannel": "You must be in the same channel as {user}",

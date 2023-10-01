@@ -51,7 +51,7 @@ export default {
     let playlist;
 
     try {
-      playlist = await Playlist.from(argSongName!.split(" ")[0], argSongName!);
+      playlist = await Playlist.from(argSongName!.split(" ")[0], argSongName!, interaction);
     } catch (error) {
       console.error(error);
 
