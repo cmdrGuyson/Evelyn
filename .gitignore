@@ -64,3 +64,5 @@ typings/
 
 # Temp ignore 
 config.json
+
+scripts/.data/

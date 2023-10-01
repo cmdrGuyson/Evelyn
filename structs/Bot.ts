@@ -11,6 +11,8 @@ import {
 } from "discord.js";
 import { readdirSync } from "fs";
 import { join } from "path";
+import play from "play-dl";
+
 import { Command } from "../interfaces/Command";
 import { checkPermissions, PermissionResult } from "../utils/checkPermissions";
 import { config } from "../utils/config";
@@ -30,13 +32,22 @@ export class Bot {
     this.client.login(config.TOKEN);
 
     this.client.on("ready", () => {
-      console.log(`${this.client.user!.username} ready!`);
+      console.log(`✅ ${this.client.user!.username} is online`);
 
       this.registerSlashCommands();
     });
 
     this.client.on("warn", (info) => console.log(info));
     this.client.on("error", console.error);
+
+    play.setToken({
+      spotify: {
+        client_id: config.SPOTIFY_CLIENT_ID,
+        client_secret: config.SPOTIFY_SECRET_ID,
+        market: config.SPOTIFY_MARKET,
+        refresh_token: config.SPOTIFY_REFRESH_TOKEN
+      }
+    });
 
     this.onInteractionCreate();
   }
